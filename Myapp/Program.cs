@@ -44,25 +44,36 @@ foreach (string mot in mots(myText))
 }
 
 //Exercice 3 
-Console.WriteLine("\nentrez le nombre de joueur");
-int nbrJoueurs = Convert.ToInt32(Console.ReadLine());
-string[] liste_joueurs = new string[nbrJoueurs];
 
-int i = 0;
-do
+IEnumerable<string> maListe(int nbr_de_Joueur)
 {
+    string[] liste_joueurs = new string[nbr_de_Joueur];
+    int i = 0;
 
-    Console.WriteLine("entrez le nom du joueur" + (i + 1));
-    string nom_Joueur = Console.ReadLine();
-    liste_joueurs[i] = nom_Joueur;
-    i++;
+    do
+    {
+
+        Console.WriteLine("entrez le nom du joueur" + (i + 1));
+        string nom_Joueur = Console.ReadLine();
+        liste_joueurs[i] = nom_Joueur;
+        i++;
 
 
-} while (i != nbrJoueurs);
+    } while (i != nbr_de_Joueur);
 
-Console.WriteLine("\nListe des Joueur\n=============");
-foreach (string item in liste_joueurs)
+    foreach (string item in liste_joueurs)
+    {
+        yield return item;
+    }
+}
+
+
+Console.WriteLine(" \nsaisir le nombre de joueur desirer");
+int totalJoueur = Convert.ToInt32(Console.ReadLine());
+
+foreach (string joueur in maListe(totalJoueur))
 {
-    Console.WriteLine("-" + item);
+    Console.WriteLine("liste  desjoueurs\n*********");
+    Console.WriteLine("-"+joueur);
 }
 
