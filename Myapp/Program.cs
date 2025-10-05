@@ -22,10 +22,16 @@ cout2.AfficherInfos();
 Console.WriteLine("====================================");
 
 Personne user1 = new Personne();
+Personne user2 = new Personne();
 
 user1.Nom = "Franck Pagnol Nounjo Djomini";
 user1.Age = 29;
 user1.Ville = "Trois riviere";
 
+user2.Nom = "";
+user2.Age = 27;
+user2.Ville = "moscou";
 user1.afficher();
+Console.WriteLine("====================================");
+user2.afficher();
 

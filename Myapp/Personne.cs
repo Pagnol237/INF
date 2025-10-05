@@ -1,21 +1,33 @@
 namespace Myapp
 {
     public class Personne
+
     {
+
+        private string _nom;
+        private int _age;
+        private string _ville;
         public string Nom
         {
-            get { return Nom; }
-            set{ Nom = value; }
+            get { return _nom; }
+            set
+            {
+                if (string.IsNullOrWhiteSpace(value))
+                {
+                    Console.WriteLine("etrez un nom valide");
+                }
+                else { _nom = value; }
+            }
         }
         public int Age
         {
-            get { return Age; }
-            set { if (Age > 0) Age = value; }
+            get { return _age; }
+            set { if (value > 0) _age = value; }
         }
         public string Ville
         {
-            get { return Ville; }
-            set { Ville = value; }
+            get { return _ville; }
+            set { _ville = value; }
         }
 
         public void afficher()
@@ -24,3 +36,4 @@ namespace Myapp
         }
     }
 }
+
