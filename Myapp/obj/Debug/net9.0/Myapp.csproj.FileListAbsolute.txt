@@ -13,9 +13,9 @@ C:\Users\pnoun\Desktop\c#\Myapp\obj\Debug\net9.0\Myapp.pdb
 C:\Users\pnoun\Desktop\c#\Myapp\obj\Debug\net9.0\Myapp.genruntimeconfig.cache
 C:\Users\pnoun\Desktop\c#\Myapp\obj\Debug\net9.0\ref\Myapp.dll
 C:\Users\pnoun\Desktop\INF\Myapp\bin\Debug\net9.0\Myapp.exe
+C:\Users\pnoun\Desktop\INF\Myapp\bin\Debug\net9.0\Myapp.dll
 C:\Users\pnoun\Desktop\INF\Myapp\bin\Debug\net9.0\Myapp.deps.json
 C:\Users\pnoun\Desktop\INF\Myapp\bin\Debug\net9.0\Myapp.runtimeconfig.json
-C:\Users\pnoun\Desktop\INF\Myapp\bin\Debug\net9.0\Myapp.dll
 C:\Users\pnoun\Desktop\INF\Myapp\bin\Debug\net9.0\Myapp.pdb
 C:\Users\pnoun\Desktop\INF\Myapp\obj\Debug\net9.0\Myapp.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\pnoun\Desktop\INF\Myapp\obj\Debug\net9.0\Myapp.AssemblyInfoInputs.cache

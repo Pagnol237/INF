@@ -2,78 +2,30 @@
 
 
 using System.Runtime.CompilerServices;
+using System.Security.Cryptography;
+using Myapp;
+
 
 Console.WriteLine("a partir de ce jour je reussi dans ce que j\'entreprend sigé franck pagnol");
 
 
-// exercice 1 : Crée une méthode qui utilise yield pour retourner tous les nombres pairs entre 1 et 100.Teste-la avec un foreach.
+// chapitre 3
 
+CompteBancaire cout1 = new CompteBancaire("NOUF27369500","franck pagnol",10000000000000);
+CompteBancaire cout2 = new CompteBancaire("NMF27365651", "manuella forturne", 10000000000000);
 
-static IEnumerable<int> Range (int a,int b)
-{
-    for (int i = a; i <= b; i++)
-    {
-        if (i % 2 == 0)
-        {
-            yield return i;
-        }
-    }
-}
+cout2.Retirer(2586000000);
 
-foreach (int items in Range(1, 100))
-{
-    Console.WriteLine("-" + items);
-}
+cout1.AfficherInfos();
+Console.WriteLine("----------");
+cout2.AfficherInfos();
+Console.WriteLine("====================================");
 
-// exercice 2 : Écris une méthode qui prend une phrase en entrée et qui retourne, avec yield, chaque mot séparément.
+Personne user1 = new Personne();
 
-static IEnumerable<string> mots (string texte)
-{
-    string[] liste = texte.Split(' ');
-    foreach (string world in liste)
-    {
-        yield return world;
-    }
-}
+user1.Nom = "Franck Pagnol Nounjo Djomini";
+user1.Age = 29;
+user1.Ville = "Trois riviere";
 
-string myText = " bonjour je m'apple nounjo djomini franck et je serrais milliadaire et le meilleur dans tous ce que je vais entreprendre des aujourdhuis";
-
-foreach (string mot in mots(myText))
-{
-    Console.WriteLine("-" + mot);
-}
-
-//Exercice 3 
-
-IEnumerable<string> maListe(int nbr_de_Joueur)
-{
-    string[] liste_joueurs = new string[nbr_de_Joueur];
-    int i = 0;
-
-    do
-    {
-
-        Console.WriteLine("entrez le nom du joueur" + (i + 1));
-        string nom_Joueur = Console.ReadLine();
-        liste_joueurs[i] = nom_Joueur;
-        i++;
-
-
-    } while (i != nbr_de_Joueur);
-
-    foreach (string item in liste_joueurs)
-    {
-        yield return item;
-    }
-}
-
-
-Console.WriteLine(" \nsaisir le nombre de joueur desirer");
-int totalJoueur = Convert.ToInt32(Console.ReadLine());
-
-foreach (string joueur in maListe(totalJoueur))
-{
-    Console.WriteLine("liste  desjoueurs\n*********");
-    Console.WriteLine("-"+joueur);
-}
+user1.afficher();
 
