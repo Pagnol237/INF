@@ -1,0 +1,1 @@
+public enum Jours {lundi,mardi,mercredi, jeudi,vendredi,samedi,dimanche}
