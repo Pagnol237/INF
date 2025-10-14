@@ -40,10 +40,50 @@ namespace Myapp
             number.Add(354);
             number.Add(34);
 
-            foreach(var item in number)
+            number.Sort((a, b) =>
+            {
+                if (a % 2 == 0 && b % 2 != 0) return -1;
+                if (a % 2 != 0 && b % 2 == 0) return 1;
+                return 0;
+            });
+            foreach (var item in number)
             {
                 Console.WriteLine(item);
             }
+
+            Console.WriteLine($"le nombre d'element de la liste est {number.Count()}");
+
+
+            /*
+                Pour une List d’objets Etudiant,
+            – utiliser Where pour filtrer uniquement des
+            étudiants dont le nom commence par « a » ou
+            « A ».
+
+            */
+
+            List<string> user = new List<string>();
+
+            user.Add("franck");
+            user.Add("Adele");
+            user.Add("gigi");
+            user.Add("andorphine");
+            user.Add("alice");
+
+
+            var listeA = user.Where(str => str[0] == 'a' || str[0] == 'A');
+            
+
+            foreach(var nom in listeA){
+                Console.WriteLine(nom);
+            }
+
+
+
+
+
+
+
         }
     }
 
